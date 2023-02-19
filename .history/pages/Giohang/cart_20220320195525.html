@@ -1,0 +1,681 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping-cart</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="chtab.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="responsivecart.css" />
+    <link rel="stylesheet" href="boxchat.css" />
+    <link rel="stylesheet" href="../style/style_cactrang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="Header">
+        <a href="../../index.html">
+
+            <img src="../images/logo/logo2.png" class="logo" width="200" height="200" alt="tamanlogo" />
+        </a>
+        <!--tao thanh navbar-->
+        <div class="nav-position">
+            <nav class="navigation-bar">
+                <a href="./cart.html">THUỐC</a>
+                <a href="./tbyt.html">THIẾT BỊ Y TẾ</a>
+                <a href="chamsoccanhan.html">CHĂM SÓC CÁ NHÂN</a>
+                <a href="suckhoe.html">SỨC KHỎE</a>
+                <a href="../thongtin.html">THÔNG TIN</a>
+            </nav>
+        </div>
+        <!--tao thanh tim kiem, gio hang va nutlogin-->
+
+
+        <div class="shopping-cart">
+            <button id="cart">
+                <div class="fas fa-shopping-cart" id="cart-btn" aria-hidden="true"></div>
+            </button>
+            <div class="user-icon">
+                <div class="fas fa-user" id="login-btn"></div>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+
+                            <div class="cart-total">
+                                <strong class="cart-total-title">Tổng Cộng:</strong>
+                                <span class="cart-total-price">0VNĐ</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+
+        </div>
+        <!--Tao form tim kiem-->
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="Tìm kiếm tại đây..." />
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <!--tao form login-->
+        <form action="" class="login-form">
+            <h3>Đăng nhập</h3>
+            <input type="email" placeholder="Email" class="box">
+            <br />
+            <input type="password" placeholder="Password" class="box">
+            <p>Quên mật khẩu? <a href="#">Click vào đây</a></p>
+            <p>Chưa có tài khoản? <a href="signupform.html">Đăng ký ngay</a></p>
+            <input type="submit" value="Đăng Nhập" class="btn">
+        </form>
+
+
+
+    </header>
+
+    <!--tạo home section-->
+    <section class="thuocbanner" id="thuocbanner">
+        <span>
+      <img src="img/thuocbanner.png" class="bannerthuoc" />
+        </span>
+    </section>
+
+    <div class="tabs">
+        <button class="tablinks active" data-electronic="allproducts">Tất cả sản phẩm</button>
+        <button class="tablinks" data-electronic="Covid">Thuốc Trị Covid</button>
+        <button class="tablinks" data-electronic="SPNB">Sản Phẩm Nổi Bật</button>
+    </div>
+    <!-- content -->
+    <section class="wrapper">
+        <div class="wrapper_tabcontent">
+            <div class="products">
+                <div id="allproducts" class="tabcontent active">
+                    <ul class="list-prd">
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/1.png" alt="Delocogen">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Thuốc Delcogen Forte Điều Trị Cảm Cúm, Nhức Đầu, Sổ Mũi (Hộp 25 Vỉ x 4 Viên)</h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">90.000đ/1 hộp</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/2.png" alt="V.ROHTO">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Thuốc Nhỏ Mắt V.ROHTO 13ml</h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">45.500đ / 1 hộp</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/3.png" alt="Acemuc">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Thuốc Acemuc Trị Ho Tiêu Đàm Hộp 30 Gói 200mg</h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">56.000đ/1 hộp</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product no-margin">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/4.png" alt="strepsils">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Kẹo Ngậm Strepsils Trị Đau Họng Hộp 24 Viên</h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">26.000đ/ 1 hộp</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/nano.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Xịt Mũi Muối Biển Nano Sea Spray Người Lớn 75Ml
+                                </h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">27.000đ /Hộp
+                                        </span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/telfast.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Thuốc Telfast BD 60mg hộp 10 viên
+                                </h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">38.000₫/hộp
+                                        </span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/bamogin.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Viên uống tăng cường tuần hoàn não Bamogin
+                                </h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">149.000đ /Hộp</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/oresol.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Gói bột bù nước và điện giải Oresol</h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">100.000đ /Hộp </span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/xuong.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Xương Khớp Nhất Nhất hộp 20 viên
+                                </h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">100.000đ/1 hộp
+                                        </span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/hhtm.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Bổ não hoạt huyết thông mạch PH
+                                </h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">150.000đ/ 1 hộp</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/vol.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Voltogel Spray Xịt Giảm Đau 100Ml
+                                </h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">71.200đ /Chai </span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/xisat.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Xịt Mũi Xisat Người Lớn Chai 75Ml
+                                </h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">29.000đ /Chai
+                                        </span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/oyster.jpg.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Tinh Chất Hàu Oyster PLus Úc
+                                </h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">297.000đ/ 1 hộp</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/6.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Bột sủi thanh nhiệt Sensa Cools</h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">22.500đ</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/7.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Natri Clorid 0,9% Fresenius Kabi 250ml</h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">18.000đ</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-product no-margin">
+                            <div class="img-product">
+                                <img class="img-prd" src="img/8.png" alt="">
+                            </div>
+                            <div class="content-product">
+                                <h3 class="content-product-h3">Calcium Corbiere Trị Thiếu Canxi, Loãng Xương Hộp 30 Ống</h3>
+                                <div class="content-product-deltals">
+                                    <div class="price">
+                                        <span class="money">147.510đ/ 1 hộp</span>
+                                    </div>
+                                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            <div id="Covid" class="tabcontent">
+                <ul>
+                    <li class="covidcontent">
+                        <h1 class="HDSDCovid">Hướng dẫn sử dụng thuốc điều trị COVID-19 cho người trên 18 tuổi</h1>
+                        <p class="ttHDSD">Túi thuốc phát cho F0 đang điều trị tại nhà sẽ bao gồm 3 gói A, B, C và sử dụng tùy thuộc vào triệu chứng của bệnh nhân.</p>
+                    </li>
+                    <!--comboA-->
+                    <div class="comboA">
+                        <div class="display-cA">
+                            <div>
+                                <li class="main-product">
+                                    <div class="img-product">
+                                        <img class="img-prd prd-border prd-height" src="img/comboa.jpg" style="width: 28em" alt="">
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="contentA-margin">
+                                <h2 class="comboA-1">Gói thuốc A - Dùng trong 7 ngày</h2>
+                                <p class="spc-content info-w">Là những thuốc thông dụng bao gồm thuốc hạ sốt và thuốc nâng cao thể trạng, cấp ngay cho F0 khi tiếp nhận thông tin.</p>
+                                <div class="cbAp">
+                                    <div class="btn-alignA1">
+                                        <span class="btn btn-xs btn-primary btn-number btn-rounded circle f-w-500">1</span>
+                                    </div>
+                                    <b class="spc-content" style="margin-left:2.30em">Paracetamol 500mg</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống 01 viên khi sốt trên 38.5&deg;C, có thể lặp lại mỗi 04 giờ đến 06 giờ nếu vẫn còn sốt.</p>
+                                </div>
+                                <div class="cbAvitaminC cbAp">
+                                    <div class="btn-alignA2">
+                                        <span class="btn btn-xs btn-primary btn-number btn-rounded circle f-w-500">2</span>
+                                    </div>
+                                    <b class="spc-content" style="margin-left:2.30em">Vitamin tổng hợp</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống ngày 01 lần, lần 01 viên.</p>
+                                    <div class="hoaccbA">
+                                    </div>
+                                    <b class="spc-content" style="margin-left:2.30em">Vitamin C 500mg</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống ngày 02 lần, sáng 01 viên, trưa 01 viên.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <h3 class="content-product-h3 prd-name">Gói thuốc A cho bệnh nhân điều trị Covid</h3>
+                            <div class="content-product-deltals">
+                                <div class="price">
+                                    <span class="money money-design money-design">80.000đ</span>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                        </li>
+                    </div>
+                    <!-- combo B -->
+                    <div class="comboA">
+                        <div class="display-cA">
+                            <div>
+                                <li class="main-product">
+                                    <div class="img-product">
+                                        <img class="img-prd prd-border prd-heightB" src="img/combob.jpg" style="width: 28em" alt="">
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="contentB-margin">
+                                <h2 class="comboA-1">Gói thuốc B - TÌNH HUỐNG ĐẶC BIỆT</h2>
+                                <p class="spc-content info-w"> Là thuốc kháng viêm và thuốc chống đông.
+                                    <br> Chỉ dùng khi có chỉ định của bác sĩ theo Hướng dẫn chẩn đoán và điều trị COVID-19 tại Quyết định số 4689/QĐ-BYT ngày 06/10/2021 của Bộ Y tế. Hướng dẫn người bệnh khi cảm thấy khó thở (thở hụt hơi, khó thở tăng
+                                    lên khi vận động, nhịp thở khi nghỉ ngơi trên 20 lần/phút hoặc đo SpO2 dưới 96%), phải liên hệ ngay với bác sĩ để được tư vấn, hỗ trợ. Bác sĩ đánh giá tình trạng bệnh, nếu có chỉ định nhập viện, bác sĩ sẽ cho người
+                                    bệnh sử dụng 1 liều duy nhất trước khi chuyển viện.</p>
+                                <div class="cbAp">
+                                    <div class="btn-alignB1">
+                                        <span class="btn btn-xs btn-primary btn-number btn-rounded circle f-w-500">1</span>
+                                    </div>
+                                    <b class="spc-content" style="margin-left:2.30em">Dexamethasone 0,5mg x 12 viên</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống 01 lần, 12 viên tương đương 06 mg</p>
+                                    <b class="spc-content" style="margin-left:2.30em">Methylprednisolone 16mg x 01 viên</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống 01 lần, 01 viên.</p>
+                                </div>
+                                <div class="cbAvitaminC cbAp">
+                                    <div class="btn-alignB2">
+                                        <span class="btn btn-xs btn-primary btn-number btn-rounded circle f-w-500">2</span>
+                                    </div>
+                                    <b class="spc-content" style="margin-left:2.30em"> Rivaroxaban 10mg x 01 viên</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống 01 lần, 01 viên.</p>
+                                    <div class="hoaccbA">
+                                    </div>
+                                    <b class="spc-content" style="margin-left:2.30em">Apixaban 2,5 mg x 01 viên</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống 01 lần, 01 viên.</p>
+                                    <b class="spc-content" style="margin-left:2.30em">Dabigatran 220mg x 01 viên</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống 01 lần, 01 viên..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <h3 class="content-product-h3 prd-name">Gói thuốc B cho bệnh nhân tình huống đặc biệt</h3>
+                            <div class="content-product-deltals">
+                                <div class="price">
+                                    <span class="money money-design money-design">200.000đ</span>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                        </li>
+                    </div>
+
+                    <!--comboC-->
+                    <div class="comboA">
+                        <div class="display-cA">
+                            <div>
+                                <li class="main-product">
+                                    <div class="img-product">
+                                        <img class="img-prd prd-border prd-height" src="img/comboc.png" style="width: 28em" alt="">
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="contentA-margin">
+                                <h2 class="comboA-1">Gói thuốc C - Dùng trong 5 ngày</h2>
+                                <p class="spc-content info-w">Là thuốc kháng vi rút với liều dùng theo thuyết minh đề cương thử nghiệm lâm sàng đã được phê duyệt.
+                                    <br>Được chỉ định đối với trường hợp F0 có triệu chứng nhẹ, thuốc này được Bộ Y tế cung cấp trong Chương trình can thiệp cộng đồng có kiểm soát.<br> Khi F0 có triệu chứng nhẹ, bác sĩ của Cơ sở quản lý người nhiễm COVID-19
+                                    tại nhà phải đánh giá tình trạng sức khỏe của F0. Trong trường hợp F0 có chỉ định dùng thuốc, nhân viên của Cơ sở quản lý người nhiễm COVID-19 tại nhà cho người bệnh ký cam kết và cấp phát Gói thuốc C cho F0.</p>
+                                <div class="cbAp">
+                                    <b class="spc-content" style="margin-left:2.30em">Molnupiravir viên 200mg hoặc viên 400mg</b>
+                                    <p class="spc-content" style="margin-left:2.30em">Uống ngày 02 lần: sáng 800mg, chiều 800mg, uống 05 ngày liên tục.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-product">
+                            <h3 class="content-product-h3 prd-name">Gói thuốc C cho bệnh nhân Covid</h3>
+                            <div class="content-product-deltals">
+                                <div class="price">
+                                    <span class="money money-design money-design">150.000đ</span>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                        </li>
+                    </div>
+
+                    <div class="caution">
+                        <b style="color:red">Lưu ý sử dụng</b>
+                        <ol style="list-style-type:upper-roman">
+                            <li>Các cơ sở y tế hướng dẫn cho người F0 ký phiếu chấp thuận tham gia "Chương trình sử dụng thuốc Molnupiravir" có kiểm soát tại cộng đồng cho người mắc COVID-19 nhẹ trước khi cấp phát.</li>
+                            <li>Thuốc <strong>KHÔNG</strong> sử dụng trong trường hợp phụ nữ đang có thai hoặc có kế hoạch có thai, đang cho con bú.</li>
+                        </ol>
+                    </div>
+            </div>
+        </div>
+
+        <div id="SPNB" class="tabcontent">
+            <ul class="list-prd-2">
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="img/newkids.png" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Siro Ăn Ngon Healthy New Kids</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">79.000đ/ 1 Lọ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="img/immu.png" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Viên Sủi Không Đường Immune++</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">38.000đ/ 1 Lọ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="img/lacto.png" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Cốm Vi Sinh Lacto Biomin Gold Hd</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">125.000đ/ 1 Hộp</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="img/ferolin.png" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Sắt Dạng Ống Nước FEROLIN
+                        </h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">120.000đ/ 1 Hộp</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="img/d3.png" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Viên Uống Vitamin D3 Nature Made 50 Mcg 2000 IU, 400 viên
+
+                        </h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">458.000đ/ 1 Hộp</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="img/1daym.png" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Viên Uống One A Day Men Health Formula 300 Viên Của Mỹ
+
+
+                        </h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">572.000đ/ 1 Hộp</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="img/liver.png" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Viên Uống Giải Độc Gan Liverwell Navi</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">128.000đ/ 1 Hộp</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="img/anica.png" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">
+                            Viên uống bổ sung Canxi Anica Phytextra </h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">518.000đ/ 1 Hộp</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!--nav mobile chua chac dc xoa vi xung dot vs nav chung-->
+
+    <header>
+        <nav>
+            <!-- bắt đầu nav-mobile -->
+            <div class="nav-mobile">
+                <div class="icon-mobile" id="btnmenu">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <div class="item_menu" id="menutop">
+                    <form>
+                        <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                    <ul>
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- kết thúc nav-mobile -->
+            ....... ....... ....... .......
+        </nav>
+    </header>
+
+    <button class="nut-mo-chatbox" onclick="moForm()">Chat</button>
+    <div class="Chatbox" id="myForm">
+        <form action="" class="form-container">
+            <h1>Nhà thuốc Tâm An</h1>
+            <label for="msg"><p>Xin chào, Nhà thuốc Tâm An có thể giúp gì được cho bạn?</p></label>
+            <textarea placeholder="Bạn hãy nhập lời nhắn.." name="msg" required></textarea>
+            <button type="submit" class="btn">Gửi</button>
+            <button type="button" class="btn nut-dong-chatbox" onclick="dongForm()">Đóng</button>
+
+            <script src="boxchat.js"></script>
+        </form>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="chtab.js"></script>
+
+</body>
+
+
+</html>

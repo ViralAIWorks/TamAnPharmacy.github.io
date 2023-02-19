@@ -1,0 +1,57 @@
+.container-tip {
+    background-position: 0px 0px;
+    font-size: 14px;
+    line-height: 18.2px;
+    margin: 0px 330px;
+    padding: 0px 12px;
+}
+
+.tip {
+    background-position: 0px 0px;
+    font-size: 14px;
+    line-height: 18.2px;
+    padding: 32px 24px;
+}
+
+.guide {
+    background-position: 0px 0px;
+    color: #1e293b;
+    font-family: "Source Sans 3" sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: center;
+}
+
+.guide-content {
+    background-position: 0px 0px;
+    color: #334155;
+    font-family: "Source Sans 3" sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 8px 0px 0px;
+    text-align: center;
+}
+
+.tip1 {
+    display: flex;
+    background-position: 0px 0px;
+    font-size: 14px;
+    line-height: 18.2px;
+    padding: 32px 24px;
+}
+
+.picture1 {
+    background-position: 0px 0px;
+    flex-basis: calc(100% - 584px);
+    font-size: 14px;
+    line-height: 18.2px;
+    padding: 0px 20px;
+}
+
+.picture1 img {
+    background-position: 0px 0px;
+    font-size: 14px;
+    line-height: 18.2px;
+    width: 100px;
+}

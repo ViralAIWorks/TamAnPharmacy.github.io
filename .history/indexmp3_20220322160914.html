@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=devive-width, initial-scale=1.0" />
+    <title>Nhà Thuốc Tâm An</title>
+    <link href="images/logo/Tâm An Pharmacy.png" rel="icon" />
+
+
+    <!--CSS cho icon va framework-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!--Custom css-->
+    <link href="style/style_trangchu.css" rel="stylesheet" />
+    <!--Css cho hieu ung thanh truot (slider)-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./mp3/app.css" />
+
+
+</head>
+
+<body>
+    <!--Tạo header-->
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo/logo2.png" class="logo" width="200" height="200" alt="tamanlogo" />
+        </a>
+        <!--tao thanh navbar-->
+        <nav class="navbar">
+            <a href="pages/Giohang/cart.html">THUỐC</a>
+            <a href="pages\Giohang\tbyt.html">THIẾT BỊ Y TẾ</a>
+            <a href="pages/chamsoccanhan.html">CHĂM SÓC CÁ NHÂN</a>
+            <a href="pages/suckhoe.html">SỨC KHỎE</a>
+            <a href="pages/thongtin.html">THÔNG TIN</a>
+        </nav>
+        <!--tao thanh tim kiem, gio hang va nutlogin-->
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <button id="cart">
+                <div class="fas fa-shopping-cart" id="cart-btn" aria-hidden="true"></div>
+            </button>
+
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <!--Tao form tim kiem-->
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="Tìm kiếm tại đây..." />
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <!--tao form login-->
+        <form action="" class="login-form">
+            <h3>Đăng nhập</h3>
+            <input type="email" placeholder="Email" class="box">
+            <br />
+            <input type="password" placeholder="Password" class="box">
+            <p>Quên mật khẩu? <a href="#">Click vào đây</a></p>
+            <p>Chưa có tài khoản? <a href="pages/signupform.html">Đăng ký ngay</a></p>
+            <input type="submit" value="Đăng Nhập" class="btn">
+        </form>
+    </header>
+
+    <!--tạo home section-->
+    <section class="home" id="home">
+        <span>
+        <a href="pages/thongtin.html">
+          <img src="images/banner/TAbanner.png" class="banner" />
+        </a>
+      </span>
+    </section>
+
+    <!--tạo hỗ trợ mùa dịch-->
+    <!-- mp3 -->
+
+
+    <div class="music">
+        <h3 class="music-name">Free</h3>
+        <input type="range" name="range" id="range" class="range" />
+        <audio src="./mp3/music/528Hz.mp3" id="song"></audio>
+        <div class="timer">
+            <div class="duration">2:10</div>
+            <div class="remaining">-3:10</div>
+        </div>
+        <div class="controls">
+            <ion-icon name="infinite-outline" class="play-infinite"></ion-icon>
+            <ion-icon name="play-back" class="play-back"></ion-icon>
+            <div class="play">
+                <div class="player-inner">
+                    <ion-icon name="play" class="play-icon"></ion-icon>
+                </div>
+            </div>
+            <ion-icon name="play-forward" class="play-forward"></ion-icon>
+            <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+        </div>
+    </div>
+
+</html>
+
+<!--  -->
+<section class="covidsupport" id="covidsupport">
+    <span>
+        <img src="images/HoTroMuaDich.png" class="TagHotromuadich" />
+      </span>
+
+    <div class="box-container">
+        <ul class="margin-img">
+            <li><img src="images/covidsupport/1.png" /></li>
+            <li>
+                <a href="pages/Giohang/cart.html"><img src="images/covidsupport/2.png" /></a>
+            </li>
+            <li><img src="images/covidsupport/3.png" /></li>
+        </ul>
+    </div>
+</section>
+
+<!--SP noi bat-->
+<section class="products" id="products">
+    <span>
+            <img src="images/SPNoibat1.png" class="TagSPNoibat" />
+        </span>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="images\medicine\SPNoibat\1.png" alt="">
+                <h3>Cốm Vi Sinh Lacto Biomin Gold</h3>
+                <div class="price"> 125.000 VND / Hộp </div>
+                <a href="pages/Giohang/cart.html" class="btnDatngay">Xem Thêm</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images\medicine\SPNoibat\2.png" alt="">
+                <h3>Viên Sủi Không Đường Multivitamin</h3>
+                <div class="price"> 39.000 VND / Tuýp </div>
+
+                <a href="pages/Giohang/cart.html" class="btnDatngay">Xem Thêm</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images\medicine\SPNoibat\3.png" alt="">
+                <h3>Viên Uống Bổ Sung Canxi Anica Phylextra</h3>
+                <div class="price"> 414.000 VND / Hộp </div>
+
+                <a href="pages/Giohang/cart.html" class="btnDatngay">Xem Thêm</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images\medicine\SPNoibat\4.png" alt="">
+                <h3>Viên Uống Giải Độc Gan Liverwell Navi</h3>
+                <div class="price"> 129.000 VND / Hộp </div>
+
+                <a href="pages/Giohang/cart.html" class="btnDatngay">Xem Thêm</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images\medicine\SPNoibat\5.png" alt="">
+                <h3>Siro Ăn Ngon Healthy New Kids</h3>
+                <div class="price"> 79.000 VND / Chai </div>
+
+                <a href="pages/Giohang/cart.html" class="btnDatngay">Xem Thêm</a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+</section>
+
+<!--------------------->
+
+
+<script src="./mp3/app.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="json/homepage.js"></script>
+<script src="./pages/Giohang/cart.js"></script>
+
+
+</body>
+<footer>
+    <div class="ft-bar">
+        <div class="ft-display_img">
+            <img src="./pages/images/Footer-ThongTin/thuoc.png" alt="">
+            <img src="./pages/images/Footer-ThongTin/camket.png" alt=" ">
+            <img src="./pages/images/Footer-ThongTin/doitra.png " alt="">
+            <img src="./pages/images/Footer-ThongTin/free.png" alt="">
+        </div>
+    </div>
+    <div class="list">
+        <div class="footer-menu">
+            <h2>VỀ CHÚNG TÔI</h2>
+            <div class="ft-list">
+                <a href=""> Giới thiệu </a>
+                <a href=""> Hệ thống cửa hàng </a>
+                <a href=""> Giấy phép kinh doanh </a>
+                <a href=""> Quy chế hoạt động </a>
+                <a href=""> Chính sách đặt cọc </a>
+                <a href=""> Chính sách đổi trả thuốc </a>
+                <a href=""> Chính sách giao hàng </a>
+                <a href=""> Chính sách bảo mật </a>
+                <a href=""> Chính sách thanh toán </a>
+                <a href=""> Kiểm tra hóa đơn điện tử </a>
+                <a href=""> Tra cứu đơn hàng </a>
+            </div>
+        </div>
+        <div class="footer-menu">
+            <h2>DANH MỤC</h2>
+            <div class="ft-list">
+                <a href=""> Thực phẩm chức năng </a>
+                <a href=""> Dược mỹ phẩm </a>
+                <a href=""> Chăm sóc cá nhân </a>
+                <a href=""> Thuốc </a>
+                <a href=""> Trang thiết bị y tế </a>
+                <a href=""> Bệnh </a>
+            </div>
+        </div>
+        <div class="footer-menu">
+            <h2>THỰC PHẨM CHỨC NĂNG</h2>
+            <div class="ft-list">
+                <a href="">Cải thiện tăng cường chức năng</a>
+                <a href=""> Thảo dược-Thực phẩm tư nhân </a>
+                <a href=""> Vitamin </a>
+                <a href=""> Hỗ trợ điều trị </a>
+                <a href=""> Canxi </a>
+            </div>
+        </div>
+        <div class="footer-contact_width ft-qr">
+            <div class="ft-contact">
+                <div>
+                    <p class="ft-service">Tư vấn mua hàng (miễn phí)</p>
+                    <a href="" class="phone">0696 9696 - Hotline</a>
+                </div>
+                <div>
+                    <p class="ft-service">Góp ý, khiếu nại</p>
+                    <a href="" class="phone">0123 4567 - Hotline</a>
+                </div>
+            </div>
+            <div>
+                <img src="./images/qrcode.jpg" width="100%" class="qr-border" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,23 @@
+<!--tao thanh tim kiem, gio hang va nutlogin-->
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+        <!--Tao form tim kiem-->
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="tìm kiếm tại đây" />
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <!--tao form login-->
+        <form action="" class="login-form">
+            <h3>Đăng nhập</h3>
+            <input type="email" placeholder="Email" class="box">
+            <input type="password" placeholder="Password" class="box">
+            <p>Quên mật khẩu? <a href="#">Click vào đây</a></p>
+            <p>Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+		
+		
+		<img src="images/logo2.png" class="logo" width="260" height="260" alt="tamanlogo" />

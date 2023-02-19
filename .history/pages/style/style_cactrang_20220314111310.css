@@ -1,0 +1,257 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --outline-hover: 0.2rem solid var(--black);
+}
+
+
+/*css cho nen trang web*/
+
+* {
+    font-family: "Source Sans 3", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: None;
+    transition: all 0.2s linear;
+}
+
+body {
+    margin: 0 auto;
+    width: auto;
+}
+
+
+/*html*/
+
+html {
+    font-size: 75%;
+}
+
+
+/*css cho header*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    max-height: 100px;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .navbar a {
+    font-size: 16px;
+    font-family: "Source Sans 3", sans-serif;
+    color: #004aad;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+
+/*hover: hieu ung khi di chuot toi vi tri*/
+
+.header .navbar a:hover {
+    color: aqua;
+}
+
+.header .icons div:hover {
+    color: white;
+}
+
+.header .search-form label:hover {
+    color: Highlight;
+}
+
+.header .icons div {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background: #b6cff9;
+    color: var(--black);
+    font-size: 20px;
+    margin-left: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/*an icon tim kiem lon*/
+
+#search-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: sticky;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    width: auto;
+    height: 40px;
+    border-style: solid;
+    border-color: #004aad;
+}
+
+.header .search-form.active {
+    right: 2rem;
+    transition: 0.4s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 16px;
+    color: var(--black);
+    padding: 0px 10px;
+}
+
+
+/* icon kính lúp*/
+
+.header .search-form label {
+    font-size: 20px;
+    padding-right: 10px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
+/*Picture*/
+
+#aboutus-picture {
+    position: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 2%;
+}
+
+
+/*Page Thong Tin*/
+
+.pagethongtin {
+    margin-top: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: large;
+}
+
+main div h3 {
+    text-align: center;
+}
+
+main div p {
+    text-indent: 1cm;
+    text-align: justify;
+    margin: 1px 10%;
+    padding-bottom: 0.5cm;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.titleSize {
+    font-size: xx-large;
+    margin-bottom: 30px;
+}
+
+.flex-info,
+.flex-vision {
+    display: flex;
+}
+
+.content div {
+    margin-top: 2%;
+    padding: 0 50px;
+}
+
+.align-p {
+    padding: 0 0 auto auto;
+}
+
+.grid-des {
+    display: grid;
+}
+
+#margin {
+    margin-left: 50%
+}
+
+#img3-position {
+    text-align: center;
+}
+
+.img25-position {
+    border-radius: 10%;
+    text-align: right;
+}
+
+.ft-bar {
+    background-color: rgb(106, 204, 82);
+    height: 8vh;
+}
+
+.list {
+    display: flex;
+    margin-left: 10%;
+    margin-top: 1%;
+    text-align: left;
+}
+
+.footer-menu {
+    width: 15%;
+}
+
+.footer-contact_width {
+    width: 30%;
+}
+
+.ft-list {
+    display: grid;
+    font-size: medium;
+}
+
+.ft-list a {
+    padding: 1% 0;
+}
+
+.ft-contact {
+    display: flex;
+}
+
+.ft-contact div {
+    padding-left: 10%;
+    font-size: large;
+}
+
+.phone {
+    color: #1d48ba;
+    display: inline;
+}

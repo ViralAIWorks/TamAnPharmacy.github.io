@@ -1,0 +1,509 @@
+﻿    /* <<<<<<< Updated upstream */
+    
+    @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+     :root {
+        --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+        --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+        --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+        --outline-hover: 0.2rem solid var(--black);
+        --primary-color: #4797ff;
+        --text-color: #202020;
+    }
+    /*css cho nen trang web*/
+    
+    * {
+        font-family: "Source Sans 3", sans-serif;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: None;
+        transition: all 0.2s linear;
+    }
+    
+    body {
+        margin: 0 auto;
+        width: auto;
+        overflow-x: hidden;
+    }
+    /*html*/
+    
+    html {
+        font-size: 75%;
+    }
+    /*css cho header*/
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 5%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+        max-height: 100px;
+    }
+    
+    .header .logo {
+        cursor: pointer;
+    }
+    
+    .header .navbar a {
+        font-size: 16px;
+        font-family: "Source Sans 3", sans-serif;
+        color: #004aad;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+        display: inline-block;
+        padding: 0px 10px;
+    }
+    /*hover: hieu ung khi di chuot toi vi tri*/
+    
+    .header .navbar a:hover {
+        color: aqua;
+    }
+    
+    .header .icons div:hover {
+        color: white;
+    }
+    
+    .header .search-form label:hover {
+        color: Highlight;
+    }
+    
+    .header .icons div {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        border-radius: 5px;
+        background: #b6cff9;
+        color: var(--black);
+        font-size: 20px;
+        margin-left: 2px;
+        cursor: pointer;
+        text-align: center;
+    }
+    /*an icon tim kiem lon*/
+    
+    #search-btn {
+        display: none;
+    }
+    
+    .header .search-form {
+        position: sticky;
+        overflow: hidden;
+        border-radius: 10px;
+        display: flex;
+        box-shadow: var(--box-shadow);
+        align-items: center;
+        width: auto;
+        height: 40px;
+        border-style: solid;
+        border-color: #004aad;
+    }
+    
+    .header .search-form.active {
+        right: 2rem;
+        transition: 0.4s linear;
+    }
+    
+    .header .search-form input {
+        height: 100%;
+        width: 100%;
+        background: none;
+        text-transform: none;
+        font-size: 16px;
+        color: var(--black);
+        padding: 0px 10px;
+    }
+    /* icon kính lúp*/
+    
+    .header .search-form label {
+        font-size: 20px;
+        padding-right: 10px;
+        color: var(--black);
+        cursor: pointer;
+    }
+    /*form dang nhap*/
+    
+    .header .login-form {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 25%;
+        box-shadow: var(--box-shadow);
+        padding: 20px;
+        border-radius: 7px;
+        background: #fff;
+        text-align: left;
+        font-family: 'Source Sans 3';
+        border-style: solid;
+        border-width: 2px;
+        border-color: #004aad;
+    }
+    
+    .header .login-form h3 {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #004aad;
+        font-family: 'Source Sans 3';
+        text-align: center;
+    }
+    
+    .header .login-form .box {
+        margin: 5px;
+        border-radius: 7px;
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        color: black;
+        background: #eee;
+        text-transform: none;
+    }
+    
+    .header .login-form p {
+        font-size: 14px;
+        padding: 5px;
+    }
+    
+    .header .login-form.active {
+        right: 32px;
+        transition: 0.5s linear;
+    }
+    /*end formlogin*/
+    /*Picture*/
+    
+    #aboutus-picture {
+        position: center;
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding-top: 2%;
+        border-radius: 30px;
+    }
+    /*Page Thong Tin*/
+    
+    .pagethongtin {
+        margin-top: 100px;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: large;
+    }
+    
+    main div h3 {
+        text-align: center;
+    }
+    
+    main div p {
+        text-indent: 1cm;
+        text-align: justify;
+        margin: 1px 10%;
+        padding-bottom: 0.5cm;
+    }
+    
+    main {
+        display: grid;
+        grid-template-rows: auto;
+    }
+    
+    .titleSize {
+        font-size: xx-large;
+        margin-bottom: 30px;
+        color: #004aad;
+    }
+    
+    .flex-vision {
+        margin-right: 10%;
+    }
+    
+    .flex-info,
+    .flex-vision {
+        display: flex;
+        width: 100%;
+    }
+    
+    .content div {
+        margin-top: 2%;
+    }
+    
+    .align-p {
+        color: #004aad;
+        margin: 0 10%;
+    }
+    
+    .flex-des {
+        display: flex;
+    }
+    
+    .content-width_1 {
+        position: relative;
+    }
+    
+    .content-width_3 {
+        margin-left: 5%;
+    }
+    
+    #img3-position {
+        text-align: right;
+        border-radius: 10%;
+    }
+    
+    .img25-position {
+        border-radius: 10%;
+    }
+    
+    .list {
+        display: flex;
+        margin-left: 10%;
+        margin-top: 1%;
+        text-align: left;
+    }
+    
+    .footer-menu {
+        width: 18%;
+    }
+    
+    .footer-contact_width {
+        width: 40%;
+    }
+    
+    .ft-list {
+        display: grid;
+        font-size: medium;
+    }
+    
+    .ft-list a {
+        padding: 1% 0;
+        width: auto
+    }
+    
+    .ft-contact {
+        display: flex;
+    }
+    
+    .ft-contact div {
+        padding-left: 5%;
+        font-size: large;
+    }
+    
+    .phone {
+        color: #1d48ba;
+        display: inline;
+    }
+    
+    .ft-bar {
+        background-color: #faf8ec;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .ft-display_img {
+        display: block;
+        position: relative;
+        left: 7%;
+        justify-content: space-between;
+    }
+    
+    .ft-display_img img {
+        width: 21%;
+    }
+    
+    .qr-border {
+        border-radius: 20px;
+        display: block;
+        width: 32.75em;
+        height: 18.416666666666668em;
+    }
+    /* Css signup form */
+    
+    .signup {
+        width: 100%;
+        max-width: 40rem;
+        background-color: white;
+        border-radius: 10px;
+        padding: 3rem 3rem;
+    }
+    
+    .signup__heading {
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #004aad;
+        text-transform: uppercase;
+    }
+    
+    .signup__already {
+        text-align: center;
+        font-size: 1.6rem;
+        margin-bottom: 3.5rem;
+    }
+    
+    .signup__link {
+        color: var(--primary-color);
+        font-size: inherit;
+        text-decoration: none;
+    }
+    
+    .signup__link--underline {
+        text-decoration: underline;
+    }
+    
+    .form__group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form__group--2 {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .form__input {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-color);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        outline: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border: 1px solid #eee;
+        background-color: #eee;
+        transition: 0.25s linear;
+        width: 100%;
+    }
+    
+    .form__input:focus {
+        border-color: #eee;
+        background-color: white;
+    }
+    
+    .form__group--2>.form__input {
+        width: calc(50% - 2.5px);
+    }
+    
+    .form__group--2>.form__input:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .form__group--2>.form__input:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .form__input::-webkit-input-placeholder {
+        color: #ccc;
+        font-style: italic;
+    }
+    
+    .form__submit {
+        border-radius: 10px;
+        color: white;
+        padding: 1.5rem;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.6rem;
+        text-align: center;
+        cursor: pointer;
+        border: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form__submit-text {
+        margin: 0 auto;
+    }
+    
+    .form__tos {
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        color: #999;
+    }
+    
+    .DOB {
+        font-family: "Source Sans 3", sans-serif;
+        color: var(--text-color);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        outline: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border: 1px solid #eee;
+        background-color: #eee;
+        transition: 0.25s linear;
+        width: 40%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .Sex {
+        font-family: "Source Sans 3", sans-serif;
+        color: var(--text-color);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        outline: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border: 1px solid #eee;
+        background-color: #eee;
+        transition: 0.25s linear;
+        width: 40%;
+        margin-bottom: 1.5rem;
+    }
+    
+    h4 {
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+        font-family: "Source Sans 3", sans-serif;
+        color: #004aad;
+    }
+    
+    .location {
+        display: flex;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 20%;
+    }
+    
+    .location h3 {
+        text-align: center;
+        font-size: 32px;
+        text-transform: uppercase;
+        font-family: "Source Sans 3", sans-serif;
+        color: #004aad;
+        margin: 4%;
+    }
+    
+    .location iframe {
+        display: flex;
+        border-radius: 1.5rem;
+        box-shadow: var(--box-shadow);
+        size: 75%;
+    }
+    
+    .location .address {
+        margin: 5%;
+        align-content: flex-end;
+    }
+    
+    .location ul {
+        color: #004aad;
+        font-family: "Source Sans 3", sans-serif;
+    }
+    
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
